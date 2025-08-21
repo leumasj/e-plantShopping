@@ -232,7 +232,7 @@ function ProductList(props) {
         }
     ];
    const styleObj={
-    backgroundColor: '#D98324',
+    backgroundColor: '#615EFC',
     color: '#fff!important',
     padding: '15px',
     display: 'flex',
@@ -274,7 +274,7 @@ const handlePlantsClick = (e) => {
                <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="" />
                <a   style={{textDecoration:'none'}}>
                         <div>
-                    <h3 style={{color:'white'}}>Dave's Plants</h3>
+                    <h3 style={{color:'white'}}>Ziad's Plants</h3>
                     <i style={{color:'white'}}>Where Green Meets Serenity</i>
                     </div>
                     </a>
@@ -298,14 +298,7 @@ const handlePlantsClick = (e) => {
                     <h2>{plant.name}</h2>
                     <p>{plant.description}</p>
                     <p>{plant.cost}</p>
-                    <button
-  style={{ backgroundColor: alreadyInCart(plant.name) ? "#3A7D44" : "#D98324" }}
-  disabled={alreadyInCart(plant.name)}
-  onClick={() => handleAddToCart({ name: plant.name, cost: plant.cost, image: plant.image })}
-  className="product-button"
->
-  {alreadyInCart(plant.name) ? "Added to Cart" : "Add to Cart"}
-</button>
+                    <button style={{backgroundColor:alreadyInCart(plant.name)?"gray":"#615EFC"}} disabled={alreadyInCart(plant.name)? true:false} onClick={()=>handleAddToCart({name:plant.name,cost:plant.cost,image:plant.image})} className='product-button'>Add to Cart</button>
                 </div>)}
                  </div>
             </div>)}
